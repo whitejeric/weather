@@ -1,0 +1,169 @@
+.suggest-list-container {
+  width: 100%;
+}
+
+.dropButton{
+    background-color: white;
+    border: none;
+    padding: 11px 15px;
+    float: right;
+    align: right;
+}
+
+.cfButton{
+    position: relative;
+    background-color: white;
+    border: none;
+    font-size: 18px;
+    color: inherit;
+    width: 25px;
+    height: 25px;
+    right: -15px;
+    top: 65px;
+    overflow: hidden;
+}
+
+.regionSelector{
+  float: right !important;
+  width: 100%;
+  position: relative;
+  text-align: right;
+
+}
+
+.dropHeader{
+    color: inherit;
+    text-align:center;
+    font-size: 1.5em;
+}
+
+.cityHeader{
+    position: relative;
+    cursor: default !important;
+    top: 1%;
+    font-size: 25px;
+    vertical-align: middle;
+    background-color: white;
+    padding: 7px 7px 7px 7px;
+    margin-right: 3px;
+    overflow-x: hidden;
+  }
+
+.suggest-list {
+  list-style-type: none;
+  list-style:none;
+  padding-left:0;
+}
+
+.hot-input {
+  width:100%;
+  border: none !important;
+  outline: none;
+  padding: none;
+  background: inherit;
+}
+
+.weather-widget {
+  color: white;
+  font-family: league-gothic, sans-serif;
+  font-weight: 100;
+  width: 500px;
+  height: 200px;
+  font-style: normal;
+  padding: 0.5% 0.5% 0.5% 0.5%;
+}
+.weather-widget.very-warm {
+  background-color: red; }
+.weather-widget.warm {
+  background-color: #FF8500 }
+.weather-widget.normal {
+  background-color: #0679F0; }
+.weather-widget.cold {
+  background-color: #06799C; }
+.weather-widget.very-cold {
+  background-color: #233884; }
+
+.el.very-warm {
+    color: red !important;}
+.el.warm {
+    color: #FF8500 !important; }
+.el.normal {
+    color: #0679F0 !important; }
+.el.cold {
+    color: #06799F !important; }
+.el.very-cold {
+    color: #233884 !important; }
+
+
+.largeWeatherIcon {
+  font-size: 75px;
+  line-height: 100%;
+  height: 100px;
+  text-align: center;
+  margin-left: 15%;
+}
+
+.bigWeatherSquare{
+  position: relative;
+  overflow-x: visible;
+  left: 5%;
+  float: left;
+  height: 119px;
+  width: 135px;
+}
+
+.smallWeatherSquare{
+  position: relative;
+  overflow-x: visible;
+  left: 5%;
+  float: left;
+  width: 25%;
+}
+
+.forecastBox{
+  position: relative;
+  width: 300px;
+  top: 14%;
+  float: left;
+  margin-left: 3%;
+  left: 3%;
+  padding-top: 1%;
+  padding-bottom: 5%;
+  height: 70px;
+}
+
+.smallWeatherIcon{
+  font-size: 40px;
+  line-height: 100%;
+  height: 50px;
+}
+
+.bigTime{
+  font-size: 18px;
+  text-align: right;
+  margin-top: 1%;
+  float: right;
+  line-height: 100%;
+  cursor: default !important;
+}
+
+.temps{
+  position: relative;
+  cursor: default !important;
+  width: 100%;
+  height: 42px;
+}
+
+.bigTemp{
+  font-size: 30px;
+  float:left;
+  padding-right: 10px;
+}
+
+.smallTemp{
+  font-size: 18px;
+}
+
+.clearfix{
+  clear: both;
+}
