@@ -43,13 +43,13 @@ export default class WeatherSquare extends React.Component{
       tempDisplay = (
           <div className='temps'>
             <span className={this.props.sqStyle+'Temp'}>
-              {maxTemp}<i className="wi wi-degrees"></i>/{minTemp}<i className="wi wi-degrees"></i>
+              {maxTemp}<i className="wi wi-degrees"></i>/{minTemp}<i className="wi wi-degrees"></i>{format}
             </span>
           </div>
       );
     }
     else{
-      if (this.props.humidity && this.props.wind){
+      if (this.props.humidity || this.props.wind){
         windAndRain = (
           <div>
             <span><i className="wi wi-humidity"></i> {this.props.humidity}</span>
