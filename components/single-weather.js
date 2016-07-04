@@ -332,10 +332,10 @@ export default class SingleWeather extends React.Component{
     if (this.state.temp >= 30){
       color = 'very-warm';
     }
-    if (this.state.temp >= 18 && this.state.temp < 30){
+    if (this.state.temp >= 20 && this.state.temp < 30){
       color = 'warm';
     }
-    if (this.state.temp > 10 && this.state.temp < 18){
+    if (this.state.temp > 10 && this.state.temp < 20){
       color = 'normal';
     }
     if (this.state.temp > 0 && this.state.temp < 10){
@@ -383,7 +383,15 @@ export default class SingleWeather extends React.Component{
     });
   }
 
+
   render(){
+    var plusOff = '';
+    if (this.state.geoOff > 0){
+      plusOff = '+';
+    }
+    else{
+      plusOff = '';
+    }
     return (
 
       <div className={'weather-widget ' + this.state.tempColor}>
@@ -395,7 +403,7 @@ export default class SingleWeather extends React.Component{
         selectFunction={this.changeRegion.bind(this)}
         submitFunction={this.handleSubmit.bind(this)}
       />
-      <span className='bigTime'>{this.state.geoTime} {this.state.geoOff / 3600000} hrs GMT</span>
+    <span className='bigTime'>{this.state.geoTime} GMT/UTC {plusOff}{this.state.geoOff / 3600000} hrs </span>
 
 
       <WeatherSquare sqStyle='big'
