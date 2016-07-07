@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "babel-polyfill": "^6.3.14",
+    "moment": "^2.14.1",
     "react": "^0.14.7",
     "react-bootstrap": "^0.29.4",
     "react-dom": "^0.14.7",
