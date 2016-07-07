@@ -17,6 +17,7 @@
     "react-dom": "^0.14.7",
     "react-geosuggest": "^1.24.1",
     "react-redux": "^4.1.2",
+    "react-sparklines": "^1.6.0",
     "redux": "^3.1.2",
     "whatwg-fetch": "^1.0.0"
   },

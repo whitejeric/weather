@@ -13,6 +13,7 @@ import RegionSelector from './region-selector';
 import SingleWeatherApi from '../util/single-weather-api';
 import FiveDayWeatherApi from '../util/five-day-weather-api';
 import TimezoneApi from '../util/timezone-api';
+import WeatherSquiggle from './weather-squiggle';
 
 var moment = require('moment');
 
@@ -392,9 +393,30 @@ export default class SingleWeather extends React.Component{
     else{
       plusOff = '';
     }
+
+    const squiggleData = [
+      this.state.temp,
+
+      this.state.day1Weather.avgTemp,
+      this.state.day2Weather.avgTemp,
+      this.state.day3Weather.avgTemp,
+      this.state.day4Weather.avgTemp
+
+      ];
+    console.log('squgi: ');
+    console.log(squiggleData);
     return (
+      <div>
 
       <div className={'weather-widget ' + this.state.tempColor}>
+
+        <span className={'el ' + this.state.tempColor}>
+          <button className='cfButton' onClick={this.swapTemperatureType.bind(this)}>
+            {this.state.farenheit ? 'farenheit' : 'celsius'}
+          </button>
+        </span>
+
+        <WeatherSquiggle color='white' data={squiggleData}/>
 
       <RegionSelector
         elementColor={'el ' + this.state.tempColor}
@@ -448,10 +470,8 @@ export default class SingleWeather extends React.Component{
             />
         </div>
 
-        <br /><br /><br /><br />
-        <span className={'el ' + this.state.tempColor}><button className='cfButton' onClick={this.swapTemperatureType.bind(this)}>
-          {this.state.farenheit ? 'F' : 'C'}
-        </button></span>
+
+      </div>
       </div>
 
     )
