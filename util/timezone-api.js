@@ -1,6 +1,9 @@
+
+import {GOOGLE_TIMEZONE_BROWSER_KEY} from './api-keys';
+
 var Fetch = require('whatwg-fetch');
 var rootUrl = 'https://maps.googleapis.com/maps/api/timezone/json?location=';
-var apiUrl = '&key=GOOGLE_MAPS_TIMEZONE_API_KEY';
+var apiUrl = `&key=${GOOGLE_TIMEZONE_BROWSER_KEY}`;
 
 module.exports = {
   get: function(lat, lng, timeInGMT){
